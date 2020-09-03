@@ -172,6 +172,7 @@ body {
 @media (max-width: 500px) {
     body {
         background-image: url(/images/bg-mobile.png);
+        background-size: cover;
         .main {
             width: 90%;
             .container {

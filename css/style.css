@@ -240,6 +240,7 @@ body .main .container .rigth .load-box .load span {
 @media (max-width: 500px) {
   body {
     background-image: url(/images/bg-mobile.png);
+    background-size: cover;
   }
   body .main {
     width: 90%;
