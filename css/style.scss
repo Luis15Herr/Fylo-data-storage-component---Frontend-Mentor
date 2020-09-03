@@ -1,0 +1,204 @@
+html {
+    height: 100%;
+    @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+    font-family: "Raleway", sans-serif;
+}
+body {
+    height: 100%;
+    background-color: #0c122c;
+    background-image: url(/images/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    display: flex;
+    margin: 0;
+    .main {
+        margin: auto;
+        width: 1440px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .container {
+            width: 64%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            .left {
+                position: relative;
+                top: -10px;
+                width: 38%;
+                background-color: hsl(228, 56%, 26%);
+                border-radius: 10px 100px 10px 10px;
+                .content {
+                    padding: 40px 40px;
+
+                    width: 55%;
+                    .logo {
+                        img {
+                            width: 135px;
+                        }
+                        margin-bottom: 30px;
+                    }
+                    .features-box {
+                        display: flex;
+                        align-items: center;
+
+                        .features {
+                            background-color: hsl(229, 57%, 11%);
+                            height: 48px;
+                            width: 48px;
+                            border-radius: 10px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin-right: 15px;
+                        }
+                    }
+                }
+            }
+            .rigth {
+                width: 59%;
+                background-color: #1d2c67;
+                border-radius: 10px;
+                position: relative;
+                top: -10px;
+                .load-box {
+                    padding: 25px 40px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    position: relative;
+                    .storage-left {
+                        position: absolute;
+                        right: 40px;
+                        top: -30%;
+                        background-color: white;
+                        padding: 10px 20px;
+                        border-radius: 10px;
+                        &::after {
+                            content: "";
+                            display: block;
+                            width: 0;
+                            height: 0;
+                            border-style: solid;
+                            border-width: 20px 20px 20px 0;
+                            border-color: transparent #fff transparent transparent;
+                            position: absolute;
+                            right: 0;
+                            top: 70%;
+                        }
+                        span {
+                            display: flex;
+                            align-items: center;
+                            font-weight: 700;
+                            font-size: 14px;
+                            color: hsl(229, 7%, 55%);
+                            text-transform: uppercase;
+                            .number {
+                                font-size: 3em;
+                                color: #0c122c;
+                                padding-right: 10px;
+                            }
+                        }
+                    }
+                    .usage-storage {
+                        color: hsl(243, 100%, 93%);
+                        padding: 15px 0;
+                        font-size: 14px;
+                        .gb {
+                            font-weight: 700;
+                        }
+                    }
+                    .load {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        .load-bar {
+                            width: 100%;
+                            height: 20px;
+                            background: #0c122c;
+                            border-radius: 100px;
+                            overflow: hidden;
+                            .bar {
+                                width: 70%;
+                                height: 14px;
+                                z-index: 14;
+                                border: 3px solid #0c122c;
+                                border-radius: 100px;
+                                position: relative;
+
+                                // Animation
+                                background: repeating-linear-gradient(to right, #ffa399 0, #ff4d97 50%, #ffa399 100%);
+                                background-size: 200% 200%;
+                                background-position: 0 100%;
+                                animation: gradient 2s linear infinite;
+                                animation-fill-mode: forwards;
+                                animation-timing-function: linear;
+                                &::before {
+                                    content: "";
+                                    display: inline-block;
+                                    width: 10px;
+                                    height: 10px;
+                                    background: hsl(243, 100%, 93%);
+                                    position: absolute;
+                                    right: 2px;
+                                    top: 2px;
+                                    border-radius: 100%;
+                                }
+                            }
+                        }
+                        span {
+                            color: hsl(243, 100%, 93%);
+                            padding: 10px 0;
+                            font-weight: 700;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+        background-image: url(/images/bg-mobile.png);
+        .main {
+            width: 90%;
+            .container {
+                width: 100%;
+                flex-wrap: wrap;
+                .left {
+                    width: 100%;
+                    top: 0;
+                }
+                .rigth {
+                    margin-top: 20px;
+                    width: 100%;
+                    top: 0;
+                    .load-box {
+                        padding-bottom: 30px;
+                        .storage-left {
+                            left: 50%;
+                            transform: translateX(-50%);
+                            right: 0;
+                            top: 85%;
+                            &::after{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
