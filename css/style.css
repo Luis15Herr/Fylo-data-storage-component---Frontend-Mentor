@@ -237,7 +237,7 @@ body .main .container .rigth .load-box .load span {
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1500px) {
   body {
     background-image: none;
   }
