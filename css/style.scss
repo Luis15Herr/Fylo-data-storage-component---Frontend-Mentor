@@ -28,6 +28,7 @@ body {
                 width: 38%;
                 background-color: hsl(228, 56%, 26%);
                 border-radius: 10px 100px 10px 10px;
+                box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.25);
                 .content {
                     padding: 40px 40px;
 
@@ -61,6 +62,7 @@ body {
                 border-radius: 10px;
                 position: relative;
                 top: -10px;
+                box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.25);
                 .load-box {
                     padding: 25px 40px;
                     display: flex;
@@ -187,7 +189,18 @@ body {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1030px) {
+    body {
+        .main {
+            width: 100%;
+            .container {
+                width: 85%;
+            }
+        }
+    }
+}
+
+@media (max-width: 820px) {
     body {
         background-image: url(/images/bg-mobile.png);
         background-size: cover;
